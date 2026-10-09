@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.idea/
+.ipynb_checkpoints/
+
+# Large generated files (rerun the scripts to recreate them)
+results/bootstrap_sharpe.csv
+results/sr_sensitivity_wealth.csv

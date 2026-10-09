@@ -1,0 +1,10 @@
+strategy,omega,prior_cov,sharpe
+"HMM + BL (statistical, sample)",statistical,sample,0.6527484354017837
+"HMM + BL (idzorek, sample)",idzorek,sample,0.5067239238951482
+"HMM + BL (conditional, sample)",conditional,sample,0.42416268015380015
+"HMM + BL (statistical, ledoit_wolf)",statistical,ledoit_wolf,0.6542391404536135
+"HMM + BL (idzorek, ledoit_wolf)",idzorek,ledoit_wolf,0.507109610389797
+"HMM + BL (conditional, ledoit_wolf)",conditional,ledoit_wolf,0.4250070489896973
+"HMM + BL (statistical, mcd)",statistical,mcd,0.6007848651608712
+"HMM + BL (idzorek, mcd)",idzorek,mcd,0.4753623638545359
+"HMM + BL (conditional, mcd)",conditional,mcd,0.46976315359714077
