@@ -142,7 +142,7 @@ days / 252). The portfolio value is $W_t = \prod_{s \le t} (1 + R_s)$ and $q_{0.
 \mathrm{VaR}_{99\%} &= -q_{0.01} \\[4pt]
 \mathrm{ES}_{99\%} &= -\mathrm{mean}(R_t \mid R_t \le q_{0.01}) \\[4pt]
 \mathrm{Turnover/yr} &= \frac{1}{Y} \sum_{\mathrm{rebalances}} \lVert w_{\mathrm{new}} - w_{\mathrm{cur}} \rVert_1 \\[4pt]
-\mathrm{Costs/yr} &= \kappa \cdot \mathrm{Turnover/yr}
+\mathrm{Costs/yr} &= \kappa \cdot \mathrm{Turnover/Y}
 \end{aligned}
 ```
 
