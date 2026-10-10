@@ -1,8 +1,16 @@
 # Regime-aware Black-Litterman: HMM + Black-Litterman asset allocation
 
 This work is a first exploratory analysis of asset allocation using a classical combination of a
-Hidden Markov Model and the Black-Litterman model. We consider long-only portfolios with
-proportional transaction costs, built from 9 ETFs quoted in USD:
+Hidden Markov Model and the Black-Litterman model: the HMM identifies the market regimes and
+provides the views, Black-Litterman combines them with an equilibrium prior. Three specifications of
+the views (most likely regime, mixture of regimes, Idzorek) are combined with three estimators of
+the covariance matrix of the prior: the sample covariance, Ledoit-Wolf shrinkage and the Minimum
+Covariance Determinant. The resulting nine configurations are backtested walk-forward from 2011 to
+2026, against passive benchmarks, and their Sharpe ratios are compared with a paired circular block
+bootstrap, with Holm's correction for multiple comparisons.
+
+We consider long-only portfolios with proportional transaction costs, built from 9 ETFs quoted in
+USD:
 
 - **SPY:** S&P 500 (US large caps)
 - **EEM:** MSCI Emerging Markets
