@@ -132,17 +132,21 @@ Computed on the daily simple returns $R_t$ of the backtest, net of costs, over $
 days / 252). The portfolio value is $W_t = \prod_{s \le t} (1 + R_s)$ and $q_{0.01}$ is the empirical
 1% quantile of the daily returns.
 
-| Metric | Definition |
-|---|---|
-| CAGR | $W_T^{1/Y} - 1$ |
-| Vol | $\sqrt{252} \operatorname{std}(R_t)$ |
-| Sharpe | $\sqrt{252} \operatorname{mean}(R_t - r_{f,t}) / \operatorname{std}(R_t - r_{f,t})$ |
-| MaxDD | $\min_t (W_t / \max_{s \le t} W_s - 1)$ |
-| Calmar | $\mathrm{CAGR} / \lvert \mathrm{MaxDD} \rvert$ |
-| VaR 99% | $-q_{0.01}$ (historical, daily) |
-| ES 99% | $-\operatorname{mean}(R_t \mid R_t \le q_{0.01})$ (historical, daily) |
-| Turnover/yr | $\sum_{\mathrm{rebalances}} \lVert w_{\mathrm{new}} - w_{\mathrm{cur}} \rVert_1 / Y$ |
-| Costs/yr | $\kappa$ × Turnover/yr, as a fraction of wealth |
+```math
+\begin{aligned}
+\mathrm{CAGR} &= W_T^{1/Y} - 1 \\[4pt]
+\mathrm{Vol} &= \sqrt{252} \, \mathrm{std}(R_t) \\[4pt]
+\mathrm{Sharpe} &= \sqrt{252} \, \frac{\mathrm{mean}(R_t - r_{f,t})}{\mathrm{std}(R_t - r_{f,t})} \\[4pt]
+\mathrm{MaxDD} &= \min_t \left( \frac{W_t}{\max_{s \le t} W_s} - 1 \right) \\[4pt]
+\mathrm{Calmar} &= \frac{\mathrm{CAGR}}{|\mathrm{MaxDD}|} \\[4pt]
+\mathrm{VaR}_{99\%} &= -q_{0.01} \\[4pt]
+\mathrm{ES}_{99\%} &= -\mathrm{mean}(R_t \mid R_t \le q_{0.01}) \\[4pt]
+\mathrm{Turnover/yr} &= \frac{1}{Y} \sum_{\mathrm{rebalances}} \lVert w_{\mathrm{new}} - w_{\mathrm{cur}} \rVert_1 \\[4pt]
+\mathrm{Costs/yr} &= \kappa \cdot \mathrm{Turnover/yr}
+\end{aligned}
+```
+
+VaR and ES are historical and computed on daily returns; costs are a fraction of wealth.
 
 Differences in Sharpe ratio are tested with a paired circular block bootstrap (block lengths of 20,
 60 and 120 days, 2000 replicates), with Holm correction for multiple comparisons.
