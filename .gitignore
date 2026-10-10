@@ -6,3 +6,4 @@ __pycache__/
 # Large generated files (rerun the scripts to recreate them)
 results/bootstrap_sharpe.csv
 results/sr_sensitivity_wealth.csv
+results/tau_sensitivity_series.csv

@@ -1,10 +1,10 @@
 strategy,omega,prior_cov,sharpe
-"HMM + BL (statistical, sample)",statistical,sample,0.6527484354017837
-"HMM + BL (idzorek, sample)",idzorek,sample,0.5067239238951482
-"HMM + BL (conditional, sample)",conditional,sample,0.42416268015380015
-"HMM + BL (statistical, ledoit_wolf)",statistical,ledoit_wolf,0.6542391404536135
-"HMM + BL (idzorek, ledoit_wolf)",idzorek,ledoit_wolf,0.507109610389797
-"HMM + BL (conditional, ledoit_wolf)",conditional,ledoit_wolf,0.4250070489896973
-"HMM + BL (statistical, mcd)",statistical,mcd,0.6007848651608712
-"HMM + BL (idzorek, mcd)",idzorek,mcd,0.4753623638545359
-"HMM + BL (conditional, mcd)",conditional,mcd,0.46976315359714077
+"HMM + BL (statistical, sample)",statistical,sample,0.6342290534129862
+"HMM + BL (idzorek, sample)",idzorek,sample,0.5099903234258767
+"HMM + BL (conditional, sample)",conditional,sample,0.3627261051568588
+"HMM + BL (statistical, ledoit_wolf)",statistical,ledoit_wolf,0.635665037538913
+"HMM + BL (idzorek, ledoit_wolf)",idzorek,ledoit_wolf,0.5098764696143714
+"HMM + BL (conditional, ledoit_wolf)",conditional,ledoit_wolf,0.36697946119673347
+"HMM + BL (statistical, mcd)",statistical,mcd,0.636912070203862
+"HMM + BL (idzorek, mcd)",idzorek,mcd,0.48915601090123956
+"HMM + BL (conditional, mcd)",conditional,mcd,0.4645975889273021
